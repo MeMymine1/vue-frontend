@@ -263,7 +263,7 @@
             },
             methods: {
                 fetchLessons() {
-                    fetch('http://localhost:3000/collection/products')
+                    fetch('https://vue-backend-ivn4.onrender.com/collection/products')
                         .then(response => response.json())
                         .then(data => {
                             this.lessons = data;
@@ -275,7 +275,7 @@
                     if (query.length === 0) {
                         this.fetchLessons();
                     } else {
-                        fetch(`http://localhost:3000/search?query=${query}`)
+                        fetch(`https://vue-backend-ivn4.onrender.com/search?query=${query}`)
                             .then(response => response.json())
                             .then(data => {
                                 this.lessons = data;
@@ -323,7 +323,7 @@
                             phone: this.phone,
                             lessons: this.cart
                         };
-                        fetch('http://localhost:3000/collection/orders', {
+                        fetch('https://vue-backend-ivn4.onrender.com/collection/orders', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json'
